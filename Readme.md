@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Евгений  Жест](https://up.htmlacademy.ru/htmlcss/23/user/875111).
-* Наставник: `Неизвестно`.
+* Наставник: [Артём Непомнящих](https://htmlacademy.ru/profile/hoodsey20).
 
 ---
 
