@@ -87,7 +87,7 @@ a{
     background-color: #f6b5a5;
 }
 
-.sub-navigation-current {
+a.sub-navigation-current {
     color: #ffffff;
 
     background-color: #d07058;
@@ -145,6 +145,7 @@ a{
 
 .search-form input:focus {
     border-color: #8fbdec;
+    outline: none;
 }
 
 .login-form input[type="email"],
@@ -163,6 +164,7 @@ a{
 
 .login-form input:focus {
     border-color: #8fbdec;
+    outline: none;
 }
 
 .login-field a {
@@ -299,6 +301,7 @@ a{
 
 .subscribe-form input:focus {
     border-color: #8fbdec;
+    outline: none;
 }
 
     /* catalog-container */
