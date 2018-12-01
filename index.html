@@ -2,8 +2,10 @@
 <html lang="ru">
     <head>
         <meta charset="utf-8">
-        <link rel="stylesheet" href="css/style.css">
         <title>Gllacy Shop - Магазин мороженого</title>
+        <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
         <header class="main-header">
@@ -14,8 +16,8 @@
                 <ul class="site-navigation">
                     <li>
                         <a href="#">Каталог</a>
-                        <ul>
-                            <li><a href="#">Новинки</a></li>
+                        <ul class="sub-navigation">
+                            <li><a class="new-items" href="#">Новинки</a></li>
                             <li><a href="catalog.html">Сливочное</a></li>
                             <li><a href="#">Щербеты</a></li>
                             <li><a href="#">Фруктовый лед</a></li>
@@ -27,10 +29,10 @@
                 </ul>
                 <ul class="user-navigation">
                     <li class="search-site">
-                        <button class="button-search" type="button">Поиск по сайту</button>
+                        <button class="button-search" type="button" aria-label="Поиск по сайту"></button>
                         <section class="search-field">
                             <h2 class="visually-hidden">Поиск по сайту</h2>
-                            <form class="search" action="https://echo.htmlacademy.ru" method="post">
+                            <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
                                 <label class="visually-hidden" for="search-site">Поиск</label>
                                 <input id="search-site" type="search" name="search-site" placeholder="Что ищем?">
                             </form>
@@ -49,18 +51,20 @@
                                     <label class="visually-hidden" for="login-password">Пароль</label>
                                     <input id="login-password" type="password" name="password" placeholder="Пароль" required>
                                 </p>
-                                <button class="button-send" type="submit">Войти</button>
+                                <button class="button button-send" type="submit">Войти</button>
                             </form>
                             <a href="#">Забыли пароль?</a>
                             <a href="#">Новая регистрация</a>
                         </section>
                     </li>
-                    <li class="basket"><a href="basket.html">Корзина</a></li>
+                    <li class="basket">
+                        <a href="basket.html">Пусто</a>
+                    </li>
                 </ul>
             </nav>
-            <div class="opening hours">
+            <div class="opening-hours">
                 <p>С 10 до 20, ежедневно <br>
-                <a href="tel:88124502525">8 812 450-25-25</a>
+                    <a href="tel:88124502525">8 812 450-25-25</a>
                 </p>
             </div>
         </header>
@@ -113,25 +117,25 @@
             <section class="bestsellers">
                 <h2 class="visually-hidden">Хиты продаж</h2>
                 <ul class="bestsellers-list">
-                    <li class="bestsellers-item">
+                    <li class="catalog-item">
                         <h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
                         <img src="img/product1.jpg" width="267" height="267" alt="Сливочноe с апельсиновым джемом">
                         <p>310₽/кг</p>
                         <button class="button-quick-view" type="button">Быстрый просмотр</button>
                     </li>
-                    <li class="bestsellers-item">
+                    <li class="catalog-item">
                         <h3><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
                         <img src="img/product2.jpg" width="267" height="267" alt="Сливочно-кофейное мороженое">
                         <p>380₽/кг</p>
                         <button class="button-quick-view" type="button">Быстрый просмотр</button>
                     </li>
-                    <li class="bestsellers-item">
+                    <li class="catalog-item">
                         <h3><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
                         <img src="img/product3.jpg" width="267" height="267" alt="Сливочно-клубничное мороженое">
                         <p>355₽/кг</p>
                         <button class="button-quick-view" type="button">Быстрый просмотр</button>
                     </li>
-                    <li class="bestsellers-item">
+                    <li class="catalog-item">
                         <h3><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
                         <img src="img/product4.jpg" width="267" height="267" alt="Сливочноe крем-брюле">
                         <p>415₽/кг</p>
@@ -151,7 +155,7 @@
             </section>
             <section class="interesting">
                 <h2 class="visually-hidden">Интересная информация и Подписка</h2>
-                <article class="interesting content">
+                <article class="interesting-content">
                     <h3 class="visually-hidden">Интересная информация</h3>
                     <p>Новое в нашем блоге</p>
                     <a href="blog.html">10 способов сервировки к столу</a>
@@ -162,7 +166,7 @@
                     <form class="subscribe-form" action="https://echo.htmlacademy.ru" method="post">
                         <label class="visually-hidden" for="subscribe">Электронная почта</label>
                         <input id="subscribe" type="email" name="subscribe" placeholder="Электронная почта" required>
-                        <button class="button-send" type="submit">Отправить</button>
+                        <button class="button button-send" type="submit">Отправить</button>
                     </form>
                 </section>
             </section>
@@ -178,7 +182,7 @@
                             <a href="tel:88124502525">8 812 450-25-25</a><br>
                             (с 10 до 20 ежедневно)
                         </p>
-                        <button class="button-feedback" type="button">Форма обратной связи</button>
+                        <button class="button button-feedback" type="button">Форма обратной связи</button>
                     </div>
             </section>
         </main>
@@ -186,21 +190,37 @@
         <footer class="main-footer">
             <div class="social-link">
                 <ul class="social-button">
-                    <li class="social-button-twitter"><a href="#">Twitter</a></li>
-                    <li class="social-button-instagram"><a href="#">Instagram</a></li>
-                    <li class="social-button-facebook"><a href="#">Facebook</a></li>
-                    <li class="social-button-vk"><a href="#">VK</a></li>
+                    <li class="social-button-twitter">
+                        <a href="#">Twitter</a>
+                    </li>
+                    <li class="social-button-instagram">
+                        <a href="#">Instagram</a>
+                    </li>
+                    <li class="social-button-facebook">
+                        <a href="#">Facebook</a>
+                    </li>
+                    <li class="social-button-vk">
+                        <a href="#">VK</a>
+                    </li>
                 </ul>
             </div>
             <div class="quality">
                 <ul class="quality-list">
-                    <li class="quality-item"><a href="suppliers.html">Для поставщиков</a></li>
-                    <li class="quality-item"><a href="documents.html">Наши документы</a></li>
-                    <li class="quality-item"><a href="production.html">О производстве</a></li>
-                    <li class="quality-item"><a href="eco-standart.html">Экологические стандарты</a></li>
+                    <li class="quality-item">
+                        <a class="quality-bold" href="suppliers.html">Для поставщиков</a>
+                    </li>
+                    <li class="quality-item">
+                        <a href="documents.html">Наши документы</a>
+                    </li>
+                    <li class="quality-item">
+                        <a href="production.html">О производстве</a>
+                    </li>
+                    <li class="quality-item">
+                        <a href="eco-standart.html">Экологические стандарты</a>
+                    </li>
                 </ul>
             </div>
-            <div class="madein">
+            <div class="made-in">
                 <img src="img/logo-htmlacademy-small.svg" width="108" height="38" alt="Логотип Html Academy">
                 <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
             </div>
@@ -220,7 +240,7 @@
                 </p>
                 <label class="visually-hidden" for="feedback-text">Ваш отзыв</label>
                 <textarea id="feedback-text" name="feedback-text" rows="8" cols="80" placeholder="Напишите что-нибудь..." required></textarea>
-                <button class="button-send" type="submit">Отправить</button>
+                <button class="button button-send" type="submit">Отправить</button>
             </form>
             <button class="modal-close" type="button" aria-label="Закрыть форму обратной связи"></button>
         </section>
