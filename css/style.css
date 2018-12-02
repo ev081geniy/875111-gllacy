@@ -40,13 +40,15 @@ a{
 }
 
 .site-navigation a:hover,
-.site-natigation a:focus {
+.site-navigation a:focus {
     color: #323232;
 
     background-color: #f7f6f3;
 }
 
 .site-navigation a:active {
+    color: #323232;
+
     background-color: #ededed;
 }
 
@@ -128,43 +130,6 @@ a.sub-navigation-current {
 .search-field,
 .login-field {
     background-color: #f8f7f4;
-}
-
-.search-form input {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 700;
-
-    background-color: #ffffff;
-    border: 1px solid #d3d3d2;
-}
-
-.search-form input:hover {
-    border-color: #c7c6c5;
-}
-
-.search-form input:focus {
-    border-color: #8fbdec;
-    outline: none;
-}
-
-.login-form input[type="email"],
-.login-form input[type="password"] {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 700;
-
-    background-color: #ffffff;
-    border: 1px solid #d3d3d2;
-}
-
-.login-form input:hover {
-    border-color: #c7c6c5;
-}
-
-.login-form input:focus {
-    border-color: #8fbdec;
-    outline: none;
 }
 
 .login-field a {
@@ -284,24 +249,6 @@ a.sub-navigation-current {
 
     background-image: url("../img/mail-background.png");
     background-repeat: no-repeat;
-}
-
-.subscribe-form input {
-    font-size: 16px;
-    line-height: 24px;
-    font-weight: 700;
-
-    background-color: #ffffff;
-    border: 1px solid #d3d3d2;
-}
-
-.subscribe-form input:hover {
-    border-color: #c7c6c5;
-}
-
-.subscribe-form input:focus {
-    border-color: #8fbdec;
-    outline: none;
 }
 
     /* catalog-container */
@@ -474,4 +421,21 @@ a.button:active {
     color: #ffffff;
 
     background-color: #db5338;
+}
+
+.input {
+    font-size: 16px;
+    line-height: 24px;
+
+    background-color: #ffffff;
+    border: 1px solid #d3d3d2;
+}
+
+.input:hover {
+    border-color: #c7c6c5;
+}
+
+.input:focus {
+    border-color: #8fbdec;
+    outline: none;
 }
