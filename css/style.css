@@ -27,12 +27,43 @@ a{
 
     /* header */
 
+.main-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 1146px;
+    margin: 0 auto;
+    padding: 0 27px;
+
+    outline: 1px solid green; /* временно */
+}
+
+.main-header-logo {
+    width: 154px;
+    height: 64px;
+    margin-top: 9px;
+}
+
+.main-navigation {
+    display: flex;
+    width: 1146px;
+
+    outline: 1px solid red; /* временно */
+}
+
 .site-navigation {
+    display: flex;
+    margin: 0 319px 0 24px;
+    padding: 0 0;
+    width: 382px;
+
     font-size: 16px;
     line-height: 18px;
     font-weight: 700;
 
     list-style: none;
+
+    outline: 1px solid yellow; /* временно */
 }
 
 .site-navigation a {
@@ -96,13 +127,17 @@ a.sub-navigation-current {
 }
 
 .user-navigation {
-    list-style: none;
-}
-
-.user-navigation {
+    display: flex;
+    width: 267px;
+    margin: 0 0;
+    padding: 0 0;
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
+
+    list-style: none;
+
+    outline: 1px solid yellow; /* временно */
 }
 
 .button-search,
@@ -188,6 +223,8 @@ a.sub-navigation-current {
     font-size: 14px;
     line-height: 16px;
     font-weight: 700;
+
+    outline: 1px solid red; /* временно */
 }
 
 .opening-hours a {
@@ -203,6 +240,14 @@ a.sub-navigation-current {
 }
 
     /* main-countainer */
+
+.container {
+    width: 1146px;
+    padding: 0 27px;
+    margin: 0 auto;
+
+    outline: 1px solid green; /* временно */
+}
 
 .slider-control,
 .slide-list {
@@ -222,8 +267,16 @@ a.sub-navigation-current {
 }
 
 .promotion {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
     font-size: 18px;
     font-weight: 700;
+    margin-bottom: 40px;
+
+    outline: 1px solid red; /* временно */
 }
 
 .promotion h3 {
@@ -233,17 +286,29 @@ a.sub-navigation-current {
 }
 
 .promotion-berries {
+    width: 560px;
+
     background-image: url("../img/berries-background.jpg");
     background-repeat: no-repeat;
 }
 
 .promotion-chocolate {
+    width: 560px;
+
     background-image: url("../img/chocolate-background.jpg");
     background-repeat: no-repeat;
 }
 
 .bestsellers-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+
     list-style: none;
+
+    outline: 1px solid red; /* временно */
 }
 
 .advantages-list {
@@ -251,10 +316,14 @@ a.sub-navigation-current {
 }
 
 .advantages {
+    margin-bottom: 40px;
+
     color: #323232;
 
     background-image: url("../img/waffle-background.png");
     background-repeat: no-repeat;
+
+    outline: 1px solid red; /* временно */
 }
 
 .advantages b {
@@ -263,7 +332,17 @@ a.sub-navigation-current {
     font-weight: 700;
 }
 
+.interesting {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    outline: 1px solid red; /* временно */
+}
+
 .interesting-content {
+    width: 560px;
+
     font-weight: 500;
     color: #323232;
 
@@ -287,10 +366,16 @@ a.sub-navigation-current {
 }
 
 .interesting-subscribe {
+    width: 560px;
+
     color: #323232;
 
     background-image: url("../img/mail-background.png");
     background-repeat: no-repeat;
+}
+
+.main-map {
+    outline: 1px solid red; /* временно */
 }
 
 .main-map-contacts {
@@ -322,10 +407,55 @@ a.sub-navigation-current {
 
     /* catalog-container */
 
+.breadcrumbs {
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+
+    font-size: 14px;
+    line-height: 16px;
+
+    list-style: none;
+
+    outline: 1px solid red; /* временно */
+}
+
+.paige-title {
+    margin: 0;
+    margin-bottom: 30px;
+    padding: 0;
+
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: 700;
+
+    outline: 1px solid red; /* временно */
+}
+
+.breadcrumbs a {
+    color: #ffffff;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus,
+.breadcrumbs a:active {
+    color: #ffbc9e;
+}
+
+.paige-title {
+
+}
+
 .filter {
+    margin: 0;
+    margin-bottom: 40px;
+    padding: 0;
+
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
+
+    outline: 1px solid red; /* временно */
 }
 
 .filters ul {
@@ -384,13 +514,27 @@ a.sub-navigation-current {
 }
 
 .catalog-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 42px;
+
     list-style: none;
+
+    outline: 1px solid red; /* временно */
 }
 
 .catalog-item {
+    width: 267px;
+    margin-bottom: 40px;
+
     font-size: 45px;
     line-height: 45px;
     font-weight: 700;
+
+    outline: 1px solid yellow; /* временно */
 }
 
 .catalog-item a {
@@ -410,29 +554,20 @@ a.sub-navigation-current {
     font-size: 30px;
 }
 
-.breadcrumbs {
-    font-size: 14px;
-    line-height: 16px;
-
-    list-style: none;
-}
-
-.breadcrumbs a {
-    color: #ffffff;
-}
-
-.breadcrumbs a:hover,
-.breadcrumbs a:focus,
-.breadcrumbs a:active {
-    color: #ffbc9e;
-}
-
 .pagination-list {
+    width: 267px;
+    margin: 0;
+    padding: 0;
+    margin-left: 879px;
+    margin-bottom: 30px;
+
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
 
     list-style: none;
+
+    outline: 1px solid red; /* временно */
 }
 
 .pagination-item-current {
@@ -460,6 +595,22 @@ a.sub-navigation-current {
 
     /* footer */
 
+.main-footer {
+    display: flex;
+    justify-content: space-between;
+    width: 1146px;
+    padding: 0 27px;
+    margin: 0 auto;
+
+    outline: 1px solid green; /* временно */
+}
+
+.social-link {
+    width: 267px;
+
+    outline: 1px solid red; /* временно */
+}
+
 .social-button {
     list-style: none;
 }
@@ -468,13 +619,17 @@ a.sub-navigation-current {
     color: #ffffff;
 }
 
-.quality-list {
-    list-style: none;
+.quality {
+    width: 560px;
+
+    outline: 1px solid red; /* временно */
 }
 
 .quality-list {
     font-size: 13px;
     line-height: 18px;
+
+    list-style: none;
 }
 
 .quality-list a {
@@ -492,8 +647,11 @@ a.quality-bold {
 }
 
 .made-in {
+    width: 267px;
     font-size: 12px;
     line-height: 18px;
+
+    outline: 1px solid red; /* временно */
 }
 
 .made-in a {
