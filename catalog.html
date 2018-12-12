@@ -14,9 +14,9 @@
                     <img src="img/main-logo.svg" width="154" height="64" alt="Логотип Gllacy Shop">
                 </a>
                 <ul class="site-navigation">
-                    <li>
+                    <li class="site-navigation-item">
                         <a class="site-navigation-current" href="#">Каталог</a>
-                        <ul class="sub-navigation">
+                        <ul class="sub-navigation visually-hidden">
                             <li><a class="new-items" href="#">Новинки</a></li>
                             <li><a class="sub-navigation-current">Сливочное</a></li>
                             <li><a href="#">Щербеты</a></li>
@@ -24,13 +24,13 @@
                             <li><a href="#">Мелорин</a></li>
                         </ul>
                     </li>
-                    <li><a href="delivery-payment.html">Доставка и оплата</a></li>
-                    <li><a href="about.html">О Компании</a></li>
+                    <li class="site-navigation-item"><a href="delivery-payment.html">Доставка и оплата</a></li>
+                    <li class="site-navigation-item"><a href="about.html">О Компании</a></li>
                 </ul>
                 <ul class="user-navigation">
                     <li class="search-site">
                         <button class="button-search" type="button" aria-label="Поиск по сайту"></button>
-                        <section class="search-field visually-hidden">
+                        <section class="search-field">
                             <h2 class="visually-hidden">Поиск по сайту</h2>
                             <form class="search-form" action="https://echo.htmlacademy.ru" method="post">
                                 <label class="visually-hidden" for="search-site">Поиск</label>
@@ -40,7 +40,7 @@
                     </li>
                     <li class="user-login">
                         <button class="button-login" type="button">Вход</button>
-                        <section class="login-field visually-hidden">
+                        <section class="login-field">
                             <h2 class="visually-hidden">Вход в личный кабинет</h2>
                             <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
                                 <p>
@@ -52,13 +52,15 @@
                                     <input class="input" id="login-password" type="password" name="password" placeholder="Пароль" required>
                                 </p>
                                 <button class="button button-send" type="submit">Войти</button>
+                                <div class="login-links">
+                                    <a href="#">Забыли пароль?</a>
+                                    <a href="#">Новая регистрация</a>
+                                </div>
                             </form>
-                            <a href="#">Забыли пароль?</a>
-                            <a href="#">Новая регистрация</a>
                         </section>
                     </li>
                     <li class="basket">
-                        <a href="basket.html">2 товара</a>
+                        <a class="basket basket-full" href="basket.html">2 товара</a>
                         <section class="basket-field visually-hidden">
                             <h2 class="visually-hidden">Корзина</h2>
                             <ul class="basket-field-list">
@@ -86,7 +88,7 @@
                 </ul>
             </nav>
             <div class="opening-hours">
-                <p>С 10 до 20, ежедневно <br>
+                <p>С 10 до 20, ежедневно<br>
                 <a href="tel:88124502525">8 812 450-25-25</a>
                 </p>
             </div>
@@ -111,15 +113,28 @@
                             <option value="fat-content">по жирности</option>
                         </select>
                     </fieldset>
-                    <fieldset>
-                        <legend>Цена: 100 руб. – 500 руб.</legend>
-                        <div class="price-range"></div>
-                        <button class="switch-less" type="button" aria-label="переключатель цены от"></button>
-                        <button class="switch-more" type="button" aria-label="переключатель цены до"></button>
-                    </fieldset>
+                    <fieldset class="filter-price">
+                        <legend>Цена:</legend>
+                        <div class="price-controls">
+                            <label class="min-price">
+                                <input type="text" name="min-price" value="100 руб.">
+                            </label>
+                            <label class="max-price">
+                                <input type="text" name="max-price" value="500 руб.">
+                            </label>
+                        </div>
+                        <div class="price-range">
+                            <div class="scale">
+                                <div class="bar"></div>
+                                <div class="price-switch switch-less" aria-label="переключатель цены от"></div>
+                                <div class="price-switch switch-more" aria-label="переключатель цены до"></div>
+                            </div>
+
+                        </fieldset>
+                    </div>
                     <fieldset>
                         <legend>Жирность:</legend>
-                        <ul>
+                        <ul class="fat">
                             <li>
                                 <input class="fat-filter" type="radio" name="fat-filter" value="fat-0" id="fat-0">
                                 <label for="fat-0">0%</label>
@@ -140,7 +155,7 @@
                     </fieldset>
                     <fieldset>
                         <legend>Наполнители:</legend>
-                        <ul>
+                        <ul class="filler">
                             <li>
                                 <input class="filler-filter" type="checkbox" name="filler-chocolate" id="filler-chocolate" checked>
                                 <label for="filler-chocolate">шоколадные</label>
@@ -243,13 +258,13 @@
                     </li>
                 </ul>
                 <ul class="pagination-list">
-                    <li class="pagination-item"><a></a></li>
-                    <li class="pagination-item pagination-item-current">1</li>
-                    <li class="pagination-item"><a href="#">2</a></li>
-                    <li class="pagination-item"><a href="#">3</a></li>
-                    <li class="pagination-item"><a href="#">4</a></li>
-                    <li class="pagination-item"><a href="#">5</a></li>
-                    <li class="pagination-item"><a href="#"></a></li>
+                    <li class="pagination-prev disabled"><a>‹</a></li>
+                    <li class="pagination-current"><a>1</a></li>
+                    <li class="pagination"><a href="#">2</a></li>
+                    <li class="pagination"><a href="#">3</a></li>
+                    <li class="pagination"><a href="#">4</a></li>
+                    <li class="pagination"><a href="#">5</a></li>
+                    <li class="pagination-next"><a href="#">›</a></li>
                 </ul>
             </section>
         </main>
@@ -258,16 +273,16 @@
             <div class="social-link">
                 <ul class="social-button">
                     <li class="social-button-twitter">
-                        <a href="#">Twitter</a>
+                        <a href="#"><span class="visually-hidden">Twitter</span></a>
                     </li>
                     <li class="social-button-instagram">
-                        <a href="#">Instagram</a>
+                        <a href="#"><span class="visually-hidden">Instagram</span></a>
                     </li>
                     <li class="social-button-facebook">
-                        <a href="#">Facebook</a>
+                        <a href="#"><span class="visually-hidden">Facebook</span></a>
                     </li>
                     <li class="social-button-vk">
-                        <a href="#">VK</a>
+                        <a href="#"><span class="visually-hidden">VK</span></a>
                     </li>
                 </ul>
             </div>
