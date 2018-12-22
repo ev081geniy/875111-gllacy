@@ -39,7 +39,7 @@
                         </section>
                     </li>
                     <li class="user-login">
-                        <button class="button-login" type="button">Вход</button>
+                        <a class="button-login">Вход</a>
                         <section class="login-field">
                             <h2 class="visually-hidden">Вход в личный кабинет</h2>
                             <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
@@ -106,15 +106,17 @@
                 <form class="filters" action="https://echo.htmlacademy.ru" method="post">
                     <fieldset>
                         <legend>Сортировка:</legend>
-                        <select class="select-filter" name="select-filter">
-                            <option value="popularity">по популярности</option>
-                            <option value="cheap-first">сначала недорогие</option>
-                            <option value="first-dear">сначала дорогие</option>
-                            <option value="fat-content">по жирности</option>
-                        </select>
+                        <div class="select-wrapper">
+                            <select class="select-filter" name="select-filter">
+                                <option value="popularity">по популярности</option>
+                                <option value="cheap-first">сначала недорогие</option>
+                                <option value="first-dear">сначала дорогие</option>
+                                <option value="fat-content">по жирности</option>
+                            </select>
+                        </div>
                     </fieldset>
                     <fieldset class="filter-price">
-                        <legend>Цена:</legend>
+                        <p class="filter-price-title">Цена:</p>
                         <div class="price-controls">
                             <label class="min-price">
                                 <input type="text" name="min-price" value="100 руб.">
@@ -126,28 +128,28 @@
                         <div class="price-range">
                             <div class="scale">
                                 <div class="bar"></div>
-                                <div class="price-switch switch-less" aria-label="переключатель цены от"></div>
-                                <div class="price-switch switch-more" aria-label="переключатель цены до"></div>
                             </div>
+                            <button class="price-switch switch-less" type="button" aria-label="переключатель цены от"></button>
+                            <button class="price-switch switch-more" type="button" aria-label="переключатель цены до"></button>
                         </div>
                     </fieldset>
                     <fieldset>
                         <legend>Жирность:</legend>
                         <ul class="fat">
                             <li>
-                                <input class="fat-filter" type="radio" name="fat-filter" value="fat-0" id="fat-0">
+                                <input class="fat-filter visually-hidden" type="radio" name="fat-filter" value="fat-0" id="fat-0">
                                 <label for="fat-0">0%</label>
                             </li>
                             <li>
-                                <input class="fat-filter" type="radio" name="fat-filter" value="fat-10" id="fat-10" checked>
+                                <input class="fat-filter visually-hidden" type="radio" name="fat-filter" value="fat-10" id="fat-10" checked>
                                 <label for="fat-10">до 10%</label>
                             </li>
                             <li>
-                                <input class="fat-filter" type="radio" name="fat-filter" value="fat-30" id="fat-30">
+                                <input class="fat-filter visually-hidden" type="radio" name="fat-filter" value="fat-30" id="fat-30">
                                 <label for="fat-30">до 30%</label>
                             </li>
                             <li>
-                                <input class="fat-filter" type="radio" name="fat-filter" value="fat-30-more" id="fat-30-more">
+                                <input class="fat-filter visually-hidden" type="radio" name="fat-filter" value="fat-30-more" id="fat-30-more">
                                 <label for="fat-30-more">выше 30%</label>
                             </li>
                         </ul>
@@ -156,23 +158,23 @@
                         <legend>Наполнители:</legend>
                         <ul class="filler">
                             <li>
-                                <input class="filler-filter" type="checkbox" name="filler-chocolate" id="filler-chocolate" checked>
+                                <input class="filler-filter visually-hidden" type="checkbox" name="filler-chocolate" id="filler-chocolate" checked>
                                 <label for="filler-chocolate">шоколадные</label>
                             </li>
                             <li>
-                                <input class="filler-filter" type="checkbox" name="filler-sugar" id="filler-sugar" checked>
+                                <input class="filler-filter visually-hidden" type="checkbox" name="filler-sugar" id="filler-sugar" checked>
                                 <label for="filler-sugar">сахарные присыпки</label>
                             </li>
                             <li>
-                                <input class="filler-filter" type="checkbox" name="filler-fruit" id="filler-fruit">
+                                <input class="filler-filter visually-hidden" type="checkbox" name="filler-fruit" id="filler-fruit">
                                 <label for="filler-fruit">фрукты</label>
                             </li>
                             <li>
-                                <input class="filler-filter" type="checkbox" name="filler-syrup" id="filler-syrup">
+                                <input class="filler-filter visually-hidden" type="checkbox" name="filler-syrup" id="filler-syrup">
                                 <label for="filler-syrup">сиропы</label>
                             </li>
                             <li>
-                                <input class="filler-filter" type="checkbox" name="filler-jam" id="filler-jam">
+                                <input class="filler-filter visually-hidden" type="checkbox" name="filler-jam" id="filler-jam">
                                 <label for="filler-jam">джемы</label>
                             </li>
                         </ul>
@@ -184,86 +186,86 @@
                 <h2 class="visually-hidden">Каталог сливочного мороженого</h2>
                 <ul class="catalog-list">
                     <li class="catalog-item">
+                        <h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
                         <img src="img/product1.jpg" width="267" height="267" alt="Сливочноe с апельсиновым джемом">
                         <p>310₽<span>/кг</span></p>
-                        <h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
                         <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                     </li>
                     <li class="catalog-item">
+                        <h3><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
                         <img src="img/product2.jpg" width="267" height="267" alt="Сливочно-кофейное мороженое">
                         <p>380₽<span>/кг</span></p>
-                        <h3><a href="#">Сливочно-кофейное с кусочками шоколада</a></h3>
                         <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                     </li>
                     <li class="catalog-item">
+                        <h3><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
                         <img src="img/product3.jpg" width="267" height="267" alt="Сливочно-клубничное мороженое">
                         <p>355₽<span>/кг</span></p>
-                        <h3><a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a></h3>
                         <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                     </li>
                     <li class="catalog-item">
+                        <h3><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
                         <img src="img/product4.jpg" width="267" height="267" alt="Сливочноe крем-брюле">
                         <p>415₽<span>/кг</span></p>
-                        <h3><a href="#">Сливочное крем-брюле с карамельной подливкой</a></h3>
                         <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                     </li>
                     <li class="catalog-item">
+                        <h3><a href="#">Сливочное с брусничным джемом</a></h3>
                         <img src="img/product5.jpg" width="267" height="267" alt="Сливочное с брусничным джемом">
                         <p>325₽<span>/кг</span></p>
-                        <h3><a href="#">Сливочное с брусничным джемом</a></h3>
                         <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                     </li>
                     <li class="catalog-item">
+                        <h3><a href="#">Сливочно-черничное с цельными ягодами черники</a></h3>
                         <img src="img/product6.jpg" width="267" height="267" alt="Сливочно-черничное мороженое">
                         <p>410₽<span>/кг</span></p>
-                        <h3><a href="#">Сливочно-черничное с цельными ягодами черники</a></h3>
                         <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                     </li>
                     <li class="catalog-item">
+                        <h3><a href="#">Сливочно-лимонное с карамельной присыпкой</a></h3>
                         <img src="img/product7.jpg" width="267" height="267" alt="Сливочно-лимонное мороженое">
                         <p>375₽<span>/кг</span></p>
-                        <h3><a href="#">Сливочно-лимонное с карамельной присыпкой</a></h3>
                         <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                     </li>
                     <li class="catalog-item">
+                        <h3><a href="#">Сливочное с шоколадной стружкой</a></h3>
                         <img src="img/product8.jpg" width="267" height="267" alt="Сливочное с шоколадной стружкой">
                         <p>320₽<span>/кг</span></p>
-                        <h3><a href="#">Сливочное с шоколадной стружкой</a></h3>
                         <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                     </li>
                     <li class="catalog-item">
+                        <h3><a href="#">Сливочно-ванильное с кусочками шоколада</a></h3>
                         <img src="img/product9.jpg" width="267" height="267" alt="Сливочно-ванильное мороженое">
                         <p>440₽<span>/кг</span></p>
-                        <h3><a href="#">Сливочно-ванильное с кусочками шоколада</a></h3>
                         <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                     </li>
                     <li class="catalog-item">
+                        <h3><a href="#">Сливочноe с ментоловым сиропом</a></h3>
                         <img src="img/product10.jpg" width="267" height="267" alt="Сливочное с ментоловым сиропом">
                         <p>435₽<span>/кг</span></p>
-                        <h3><a href="#">Сливочноe с ментоловым сиропом</a></h3>
                         <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                     </li>
                     <li class="catalog-item">
+                        <h3><a href="#">Сливочное с кусочками черного шоколада</a></h3>
                         <img src="img/product11.jpg" width="267" height="267" alt="Сливочноe с кусочками шоколада">
                         <p>355₽<span>/кг</span></p>
-                        <h3><a href="#">Сливочное с кусочками черного шоколада</a></h3>
                         <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                     </li>
                     <li class="catalog-item">
+                        <h3><a href="#">Сливочное с мятным сиропом</a></h3>
                         <img src="img/product12.jpg" width="267" height="267" alt="Сливочноe с мятным сиропом">
                         <p>420₽<span>/кг</span></p>
-                        <h3><a href="#">Сливочное с мятным сиропом</a></h3>
                         <button class="button button-quick-view" type="button">Быстрый просмотр</button>
                     </li>
                 </ul>
                 <ul class="pagination-list">
-                    <li class="pagination-prev disabled"><a>‹</a></li>
-                    <li class="pagination-current"><a>1</a></li>
-                    <li class="pagination"><a href="#">2</a></li>
-                    <li class="pagination"><a href="#">3</a></li>
-                    <li class="pagination"><a href="#">4</a></li>
-                    <li class="pagination"><a href="#">5</a></li>
-                    <li class="pagination-next"><a href="#">›</a></li>
+                    <li><a class="pagination-prev disabled"></a></li>
+                    <li><a class="pagination pagination-current">1</a></li>
+                    <li><a class="pagination" href="#">2</a></li>
+                    <li><a class="pagination" href="#">3</a></li>
+                    <li><a class="pagination" href="#">4</a></li>
+                    <li><a class="pagination" href="#">5</a></li>
+                    <li><a class="pagination-next" href="#"></a></li>
                 </ul>
             </section>
         </main>
@@ -291,7 +293,7 @@
                     </li>
                     <li class="social-item-instagram">
                         <a href="#" aria-label="Наша страница в Instagram">
-                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                             <g>
                                 <path fill="#FFFFFF" d="M20.916,16c0,2.728-2.211,4.938-4.938,4.938S11.039,18.728,11.039,16c0-0.394,0.051-0.773,0.138-1.14
@@ -308,7 +310,7 @@
                     </li>
                     <li class="social-item-facebook">
                         <a href="#" aria-label="Наша страница в Facebook">
-                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            <svg version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                             <path fill="#FFFFFF" d="M16,0C7.164,0,0,7.163,0,16s7.164,16,16,16c8.837,0,16-7.164,16-16S24.837,0,16,0z M20.062,9.455h-3.021
                                 v3.444h3.021v3.445h-3.021v8.61h-3.021v-8.61H11v-3.445h3.021V9.455c0-1.902,1.353-3.445,3.021-3.445h3.021V9.455z"/>
@@ -317,7 +319,7 @@
                     </li>
                     <li class="social-item-vk">
                         <a href="#" aria-label="Наша страница ВКонтакте">
-                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            <svg version="1.1" id="Layer_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                  width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                             <g>
                                 <path fill="#FFFFFF" d="M16.637,14.495c0.402-0.019,0.719-0.082,0.951-0.188c0.326-0.145,0.54-0.33,0.641-0.559
