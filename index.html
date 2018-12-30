@@ -5,7 +5,7 @@
         <title>Gllacy Shop - Магазин мороженого</title>
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700&amp;subset=cyrillic" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/min.style.css">
     </head>
     <body>
         <input class="visually-hidden" type="radio" id="slide-switch-1" name="toggle" checked>
@@ -80,9 +80,9 @@
                     <h1 class="visually-hidden">Gllacy Shop - Магазин мороженого</h1>
                     <section class="main-slider">
                         <div class="slider-control">
-                            <label for="slide-switch-1"></label>
-                            <label for="slide-switch-2"></label>
-                            <label for="slide-switch-3"></label>
+                            <label for="slide-switch-1" aria-label="Переключиться на первый слайд"></label>
+                            <label for="slide-switch-2" aria-label="Переключиться на второй слайд"></label>
+                            <label for="slide-switch-3" aria-label="Переключиться на третий слайд"></label>
                         </div>
                         <ul class="slide-list">
                             <li class="slide-item" id="slide-1">
@@ -187,10 +187,10 @@
                             19/8, Санкт-Петербург</b>
                         </p>
                         <p>Для заказов по телефону:<br>
-                            <a href="tel:88124502525">8 812 450-25-25</a><br>
+                            <a class="map-contacts-phone" href="tel:88124502525">8 812 450-25-25</a><br>
                             (с 10 до 20 ежедневно)
                         </p>
-                        <button class="button button-feedback" type="button">Форма обратной связи</button>
+                        <a class="button button-feedback" href="#">Форма обратной связи</a>
                     </div>
                 </section>
             </main>
@@ -198,8 +198,8 @@
             <footer class="main-footer">
                 <div class="social-link">
                     <ul class="social-list">
-                        <li class="social-item-twitter">
-                            <a href="#" aria-label="Наша страница в Twitter">
+                        <li>
+                            <a class="social-item-twitter" href="#" aria-label="Наша страница в Twitter">
                                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="32px"
                                 	 height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                                 <g id="Layer_1">
@@ -216,8 +216,8 @@
                                 </svg>
                             </a>
                         </li>
-                        <li class="social-item-instagram">
-                            <a href="#" aria-label="Наша страница в Instagram">
+                        <li>
+                            <a class="social-item-instagram" href="#" aria-label="Наша страница в Instagram">
                                 <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 	 width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                                 <g>
@@ -233,8 +233,8 @@
                                 </svg>
                             </a>
                         </li>
-                        <li class="social-item-facebook">
-                            <a href="#" aria-label="Наша страница в Facebook">
+                        <li>
+                            <a class="social-item-facebook" href="#" aria-label="Наша страница в Facebook">
                                 <svg version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 	 width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                                 <path fill="#FFFFFF" d="M16,0C7.164,0,0,7.163,0,16s7.164,16,16,16c8.837,0,16-7.164,16-16S24.837,0,16,0z M20.062,9.455h-3.021
@@ -242,8 +242,8 @@
                                 </svg>
                             </a>
                         </li>
-                        <li class="social-item-vk">
-                            <a href="#" aria-label="Наша страница ВКонтакте">
+                        <li>
+                            <a class="social-item-vk" href="#" aria-label="Наша страница ВКонтакте">
                                 <svg version="1.1" id="Layer_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                 	 width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve">
                                 <g>
@@ -282,7 +282,9 @@
                     </ul>
                 </div>
                 <div class="made-in">
-                    <img src="img/logo-htmlacademy-small.svg" width="118" height="38" alt="Логотип Html Academy">
+                    <a href="https://htmlacademy.ru/intensive/htmlcss">
+                        <img src="img/logo-htmlacademy-small.svg" width="118" height="38" alt="Логотип Html Academy">
+                    </a>
                     <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2017</p>
                 </div>
             </footer>
@@ -309,6 +311,6 @@
             <div class="overlay"></div>
         </div>
 
-        <script src="js/script.js"></script>
+        <script src="js/min.script.js"></script>
     </body>
 </html>
